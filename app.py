@@ -42,9 +42,9 @@ if data:
         # Fetch top comments
         comments_data = fetch_comments(post_data["permalink"])
         if comments_data:
-            for comment in comments_data[1]["data"]["children"]:  # Limit to 5 comments
+            for comment in comments_data[1]["data"]["children"]:
                 if "body" in comment["data"]:
-                    post_info["comments"].append(comment["data"]["body"])  # Limit comment length
+                    post_info["comments"].append(comment["data"]["body"])
         
         posts_data.append(post_info)
 
